@@ -10,7 +10,7 @@ var bio = {
     "bioPic": "images/donkeyKong.jpg", //I don't look like DK, but he's my fave.
     "welcomeMessage": "I want to help make the world a better place",
     "skills": ["Teamwork", "Attention to Detail", "Organisation", "Resilience"]
-}
+};
 /*display function is an object in the bio object. Use .replace on helper.js
 vars to insert my own data.
 */
@@ -32,8 +32,8 @@ bio.display = function() {
     bio.skills.forEach(function(skill) {
         var formattedSkill = HTMLskills.replace("%data%", skill);
         $("#header").append(formattedSkill);
-    })
-}
+    });
+};
 
 bio.display();
 
@@ -55,7 +55,7 @@ var work = {
             "url": "https://www.ivanhoe.com.au/"
         }
     ]
-}
+};
 
 /*iterate through the array of jobs for the work experience section. include
 conditional statement to ensure the key is in the object. Each job begins
@@ -65,7 +65,7 @@ work.display = function() {
     work.jobs.forEach(function(job) {
         $("#workExperience").append(HTMLworkStart);
         var formattedEmployer = HTMLworkEmployer.replace("%data%", job.employer);
-        var formattedEmployer = formattedEmployer.replace("#", job.url);
+        formattedEmployer = formattedEmployer.replace("#", job.url);
         $(".work-entry:last").append(formattedEmployer);
         var formattedworkTitle = HTMLworkTitle.replace("%data%", job.title);
         $(".work-entry:last").append(formattedworkTitle);
@@ -75,8 +75,8 @@ work.display = function() {
         $(".work-entry:last").append(formattedworkDates);
         var formattedworkDescription = HTMLworkDescription.replace("%data%", job.description);
         $(".work-entry:last").append(formattedworkDescription);
-    })
-}
+    });
+};
 
 work.display();
 
@@ -104,7 +104,7 @@ var education = {
         "url": "http://www.udacity.com",
         "dates": "2017"
     }]
-}
+};
 
 /*iterate through the schools array. Use .replace on the helper vars to .append
 to the new education entries. use a conditional statement to ensure the key is
@@ -114,7 +114,7 @@ education.display = function() {
     education.schools.forEach(function(school) {
         $("#education").append(HTMLschoolStart);
         var formattedschoolName = HTMLschoolName.replace("%data%", school.name);
-        var formattedschoolName = formattedschoolName.replace("#", school.url);
+        formattedschoolName = formattedschoolName.replace("#", school.url);
         $(".education-entry:last").append(formattedschoolName);
         var formattedDegree = HTMLschoolDegree.replace("%data%", school.degree);
         $(".education-entry:last").append(formattedDegree);
@@ -125,19 +125,19 @@ education.display = function() {
         school.majors.forEach(function(major) {
             var formattedschoolMajor = HTMLschoolMajor.replace("%data%", major);
             $(".education-entry:last").append(formattedschoolMajor);
-        })
-    })
+        });
+    });
     $("#education").append(HTMLonlineClasses);
     education.onlineCourses.forEach(function(onlineCourse) {
         var formattedonlineTitle = HTMLonlineTitle.replace("%data%", onlineCourse.title);
-        var formattedonlineTitle = formattedonlineTitle.replace("#", onlineCourse.url);
+        formattedonlineTitle = formattedonlineTitle.replace("#", onlineCourse.url);
         $("#education").append(formattedonlineTitle);
         var formattedonlineSchool = HTMLonlineSchool.replace("%data%", onlineCourse.school);
         $("#education").append(formattedonlineSchool);
         var formattedonlineDates = HTMLonlineDates.replace("%data%", onlineCourse.dates);
         $("#education").append(formattedonlineDates);
-    })
-}
+    });
+};
 
 education.display();
 
@@ -150,7 +150,7 @@ var projects = {
             "images/door.jpg", "images/smile.png"
         ]
     }]
-}
+};
 
 /*Use conditional statement to ensure the key is in the object. Iterate through
 the projects array (although it only has one item at the moment).
@@ -170,10 +170,10 @@ projects.display = function() {
             project.images.forEach(function(image) {
                 var formattedprojectImage = HTMLprojectImage.replace("%data%", image);
                 $(".project-entry:last").append(formattedprojectImage);
-            })
+            });
         }
-    })
-}
+    });
+};
 
 projects.display();
 
@@ -196,7 +196,7 @@ function inName(oldName) {
     finalName = names.join(" ");
     // Don't delete this line!
     return finalName;
-};
+}
 
 /*Doubling up on info here, as it appears at the header. Contact details are
 pretty important though.
@@ -209,6 +209,6 @@ bio.displayletsConnect = function() {
     $("#lets-connect").append(formattedEmail);
     $("#lets-connect").append(formattedMobile);
     $("#lets-connect").append(formattedGithub);
-}
+};
 
 bio.displayletsConnect();
