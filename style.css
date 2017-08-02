@@ -11,7 +11,7 @@ h5,
 h6 {
   padding: 0;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Georgia", serif;
 }
 
 .clear-fix {
@@ -21,7 +21,7 @@ h6 {
 .education-entry,
 .work-entry,
 .project-entry {
-  padding: 0 5%;
+  padding: 0 10%;
 }
 
 h1 {
@@ -42,7 +42,7 @@ h2 {
 h3 {
   font-style: italic;
   font-size: 20px;
-  color: #000;
+  color: #999;
   line-height: 22px;
 }
 
@@ -127,9 +127,9 @@ a {
   background-color: #4a4a4a;
 }
 
-/* TODO: Replace with image later */
 #header {
-  background-color: #228B22;
+  background-color: black;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/1/16/Shennongjia_virgin_forest.jpg') center no-repeat;
 }
 
 .flex-box {
